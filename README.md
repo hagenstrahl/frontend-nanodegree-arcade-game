@@ -18,3 +18,17 @@ For detailed instructions on how to get started, check out this [guide](https://
 ## Contributing
 
 This repository is the starter code for _all_ Udacity students. Therefore, we most likely will not accept pull requests.
+
+## Installation
+
+Use git to download the project
+
+`$ git clone https://github.com/hagenstrahl/fend-project-arcade-game.git`
+
+## Usage
+
+Just open the index.html in any browser you like
+
+## Demo
+
+[Here](https://hagenstrahl.github.io/arcade-game/) is a demo.
