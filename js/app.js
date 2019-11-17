@@ -40,7 +40,6 @@ Enemy.prototype.render = function () {
 // This class requires an update(), render() and
 // a handleInput() method.
 
-
 class Player {
     constructor() {
         this.sprite = 'images/char-boy.png';
@@ -49,13 +48,15 @@ class Player {
     }
 
     update() {
-        this.render();
     }
 
     render() {
         ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
     }
 
+    /*
+    This functions converts the players input into the new positions
+     */
     handleInput(arrowKey) {
         switch (arrowKey) {
             case 'left':
@@ -79,8 +80,6 @@ class Player {
                 }
                 break;
         }
-
-        this.update();
     }
 }
 
