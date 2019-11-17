@@ -45,20 +45,14 @@ class Player {
         this.sprite = 'images/char-boy.png';
         this.x = movementX * 2;
         this.y = movementY * 5 - 50;
-    }
-
-    update() {
-    }
-
-    render() {
-        ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
+        this.nextMove = '';
     }
 
     /*
     This functions converts the players input into the new positions
      */
-    handleInput(arrowKey) {
-        switch (arrowKey) {
+    update() {
+        switch (this.nextMove) {
             case 'left':
                 if (this.x > 0) {
                     this.x-=movementX;
@@ -80,6 +74,15 @@ class Player {
                 }
                 break;
         }
+        this.nextMove = '';
+    }
+
+    render() {
+        ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
+    }
+
+    handleInput(arrowKey) {
+        this.nextMove = arrowKey;
     }
 }
 
